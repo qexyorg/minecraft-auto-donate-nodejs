@@ -17,11 +17,6 @@ Stack:
 4. Terminal: `cd /path/to/project` then `npm install`
 5. Run: `npm start`
 
-### Testing & building
-1. `cd /path/to/project/client`
-2. Build: `ng build --prod`
-3. Run test: `ng serve`
-
 Unitpay handler URL: `https://{YOUR_SITE}/payments/unitpay/`
 
 # Russian
@@ -40,10 +35,5 @@ Unitpay handler URL: `https://{YOUR_SITE}/payments/unitpay/`
 3. Откройте файл app/config.js и произведите необходимые настройки
 4. В терминале введите команду: `cd /path/to/project` затем `npm install`
 5. Команда запуска веб-сервера: `npm start`
-
-### Сборка и тестирование
-1. `cd /path/to/project/client`
-2. Собрать Angular проекта: `ng build --prod`
-3. Запуск тестового сервера: `ng serve`
 
 Адрес обработчика Unitpay: `https://{YOUR_SITE}/payments/unitpay/`

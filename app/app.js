@@ -30,7 +30,7 @@ mongoose.connection.on('error', function(){
 server.app.use(cors());
 server.app.use(bodyParser.urlencoded({extended: true}));
 server.app.use(bodyParser.json());
-server.app.use(server.express.static(path.join(__dirname, '../dist'), { index: false }));
+server.app.use(server.express.static(path.join(__dirname, '../public'), { index: false }));
 server.app.set('views', path.join(__dirname, '../views'));
 server.app.engine('html', require('ejs').renderFile);
 server.app.set('view engine', 'html');
