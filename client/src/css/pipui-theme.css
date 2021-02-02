@@ -1,0 +1,36 @@
+body {
+  background-image: url("/assets/freebg.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.container.body {
+  min-height: calc(100vh - 80px - 97px);
+}
+
+.navbar .navbar-wrapper .nav-brand {
+  padding: 0;
+}
+
+.navbar .navbar-wrapper .navbar-menu > li:last-child .nav-link {
+  padding-right: 0;
+}
+
+.navbar .navbar-wrapper .nav-li:last-child .nav-link.active::after,
+.navbar .navbar-wrapper .nav-li:last-child .nav-link:active::after,
+.navbar .navbar-wrapper .nav-li:last-child .nav-link:hover::after {
+  width: calc(100% - 12px);
+}
+
+
+
+.modal[data-id="rules"] > .wrapper {
+  width: 1180px;
+}
+
+@media (max-width: 1199px) {
+  .modal[data-id="rules"] > .wrapper {
+    width: 100%;
+  }
+}

@@ -1,0 +1,59 @@
+<div class="container home">
+
+  <h1 class="sitename">{{globals.options.sitename}}</h1>
+
+  <div class="sitedesc">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Accusamus alias assumenda aut cum dolores fugiat in, iste itaque labore laudantium
+    minus neque obcaecati odit omnis rem repudiandae sit, totam ullam.
+  </div>
+
+  <div class="online">Сейчас играют</div>
+  <div class="online-players" *ngIf="online > 0">{{online}}</div>
+  <div class="online-players" *ngIf="online < 0"><i class="fa fa-spinner fa-spin"></i></div>
+
+  <div class="start">
+    <button class="btn start-button text-upper" (click)="copyip($event)" [attr.data-copy-text]="globals.options.fakeip" type="button">{{globals.options.fakeip}}</button>
+  </div>
+
+  <div class="monitoring">
+
+  </div>
+</div>
+
+<div class="content">
+  <div class="container">
+    <form class="form-wrapper window" method="post">
+      <div class="input-block pt-20">
+        <label for="form-input-item">Выберите привилегию</label>
+        <select id="form-input-item" [(ngModel)]="paydata.item_id" name="item_id">
+          <option value="-1">Выберите привилегию</option>
+          <option *ngFor="let item of globals.options.items; index as id" [ngValue]="id">[{{item.price}} руб.] {{item.title}}</option>
+        </select>
+        <div class="input-helper">Укажите привилегию, которую хотите получить на сервере</div>
+      </div>
+
+      <div class="input-block pt-20">
+        <label for="form-input-login">Введите никнейм</label>
+        <input type="text" placeholder="Никнейм" [(ngModel)]="paydata.login" name="login" id="form-input-login">
+        <div class="input-helper">Укажите свой никнейм на сервере</div>
+      </div>
+
+      <div class="text-center pt-20">
+        <label>
+          <label class="checkbox-style"><input type="checkbox" [(ngModel)]="paydata.accept" name="accept"><span class="checkbox-style-checked"></span></label>
+          Я подтверждаю, что ознакомлен со всеми <a href="#" rel="nofollow" data-modal="rules">правилами</a> проекта
+        </label>
+      </div>
+
+      <div class="pt-40 text-center">
+        <button type="submit" (click)="pay($event)" class="btn bg-green" [disabled]="paydata.item_id == -1 || !paydata.accept || !paydata.login.length || paylock">
+          <span *ngIf="paydata.item_id == -1">Выберите привилегию</span>
+          <span *ngIf="paydata.item_id != -1">Купить за {{ globals.options.items[paydata.item_id].price }} руб.</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-last-payments></app-last-payments>

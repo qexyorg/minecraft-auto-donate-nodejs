@@ -1,0 +1,23 @@
+<div class="last-payments" *ngIf="globals.last.length">
+  <div class="container">
+    <div class="last-name">Последние покупки</div>
+
+    <div class="list">
+      <div *ngFor="let item of globals.last; index as id" class="item-id">
+
+        <div class="item-wrapper" *ngIf="globals.options.items[item.item_id]">
+          <div class="image" style="background-image: url('/assets/steve.png')"></div>
+          <div class="title">{{globals.options.items[item.item_id].title}}</div>
+          <div class="player">{{item.player}}</div>
+        </div>
+
+        <div class="item-wrapper item-none" *ngIf="!globals.options.items[item.item_id]">
+          <div class="image" style="background-image: url('/assets/steve.png')"></div>
+          <div class="title"><i class="fa fa-exclamation-triangle"></i></div>
+          <div class="player"><i class="fa fa-user-secret"></i></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
