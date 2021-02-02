@@ -19,6 +19,8 @@ Stack:
 
 Unitpay handler URL: `https://{YOUR_SITE}/payments/unitpay/`
 
+Angular part: https://github.com/qexyorg/minecraft-auto-donate-angular
+
 # Russian
 Одностраничное приложение для приема платежей с игрового сервера Minecraft
 
@@ -37,3 +39,5 @@ Unitpay handler URL: `https://{YOUR_SITE}/payments/unitpay/`
 5. Команда запуска веб-сервера: `npm start`
 
 Адрес обработчика Unitpay: `https://{YOUR_SITE}/payments/unitpay/`
+
+ Часть отвечающая за фронт (Angular): https://github.com/qexyorg/minecraft-auto-donate-angular
