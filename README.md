@@ -8,6 +8,7 @@ Stack:
 - Payment aggregator: Unitpay
 - Give method: RCON
 - Front-end: Angular
+- Real-time: Socket.IO
 - Settings: Configuration file
 
 ### Installation
@@ -32,6 +33,7 @@ Unitpay handler URL: `https://{YOUR_SITE}/payments/unitpay/`
 - Платежный агрегатор: Unitpay
 - Метод выдачи привилегий: RCON
 - Front-end: Angular
+- Real-time: Socket.IO
 - Метод настроек: Файл конфигурации
 
 ### Инструкция по установке
