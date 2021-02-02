@@ -4,10 +4,12 @@
 SPA Onepage application for minecraft server auto donate platform
 
 Stack:
+- Server side: Node.JS
 - Database: MongoDB
 - Payment aggregator: Unitpay
 - Give method: RCON
-- Front-end: Angular
+- Front-end framework: Angular
+- Back-end framework: Express
 - Real-time: Socket.IO
 - Settings: Configuration file
 
@@ -29,10 +31,12 @@ Unitpay handler URL: `https://{YOUR_SITE}/payments/unitpay/`
 Одностраничное приложение для приема платежей с игрового сервера Minecraft
 
 Используемые инструменты:
+- Серверная часть: Node.JS
 - База данных: MongoDB
 - Платежный агрегатор: Unitpay
 - Метод выдачи привилегий: RCON
-- Front-end: Angular
+- Front-end фреймворк: Angular
+- Back-end фреймворк: Express
 - Real-time: Socket.IO
 - Метод настроек: Файл конфигурации
 
